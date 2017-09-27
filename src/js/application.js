@@ -427,8 +427,8 @@ function getIngredients() {
 
     var results = [];
     $.each(personaQ.fusions.normal, function(i, value) {
+        // console.log(this.result, persona.arcana);
         if (this.result === persona.arcana) {
-            // console.log(this.arcana);
             results.push(this);
         }
     });

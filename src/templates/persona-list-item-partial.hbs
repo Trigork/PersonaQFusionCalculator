@@ -1,9 +1,20 @@
 <li class="row list-group-item{{#ifEq @root.active name}} list-group-item-info{{/ifEq}}">
-    <div class="col-xs-4 col-md-6">{{name}}</div>
+    <div class="col-xs-3 col-md-6">
+      {{name}}
+      {{#ifEq type "special"}}
+        <span class="glyphicon glyphicon-star" title="Special Fusion Only"></span>
+      {{/ifEq}}
+      {{#ifEq type "dlc"}}
+        <span class="glyphicon glyphicon-circle-arrow-down" title="DLC Persona"></span>
+      {{/ifEq}}
+      {{#ifEq type "item"}}
+        <span class="glyphicon glyphicon-bookmark" title="Requires Request Item"></span>
+      {{/ifEq}}
+    </div>
     <div class="col-xs-1">{{level}}</div>
     <div class="col-xs-1">{{hp}}</div>
     <div class="col-xs-1">{{sp}}</div>
-                
+
     <div class="col-xs-3 text-right">
         <div class="dropdown">
             <button class="btn btn-primary btn-xs" data-toggle="dropdown" aria-expanded="false">
