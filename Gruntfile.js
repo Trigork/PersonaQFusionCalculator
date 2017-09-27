@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-    
+
     grunt.initConfig({
         connect: {
             server: {
@@ -16,11 +16,11 @@ module.exports = function(grunt) {
                     partialsUseNamespace: true,
                     processName: function(filePath) {
                         var name = filePath.split("/")[filePath.split("/").length - 1].split(".")[0];
-                        
+
                         var r = "";
                         for (var i = 0; i < name.split('-').length; i++) {
                             var word = name.split("-")[i];
-                            
+
                             if (r !== "") {
                                 r += word.substring(0, 1).toUpperCase() + word.substring(1, word.length).toLowerCase();
                             }
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                                 r += word.toLowerCase();
                             }
                         }
-                        
+
                         return r;
                     }
                 },
@@ -92,8 +92,8 @@ module.exports = function(grunt) {
         uglify: {
             default: {
                 files: {
-                    '/dist/js/application.min.js': [
-                        'src/js/persona-q.json', 
+                    'dist/js/application.min.js': [
+                        'src/js/persona-q.json',
                         'src/js/persona-q-skills.json',
                         'src/js/application.js',
                         'src/js/handlebars-templates.js'
@@ -102,7 +102,7 @@ module.exports = function(grunt) {
             }
         }
     });
-    
+
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-handlebars');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -110,7 +110,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    
+
     grunt.registerTask('test', ['connect', 'qunit']);
-    grunt.registerTask('build', ['jshint', 'test', 'less', 'handlebars', 'uglify']);    
+    grunt.registerTask('build', ['jshint', 'test', 'less', 'handlebars', 'uglify']);
+    grunt.registerTask('fbuild', ['jshint', 'less', 'handlebars', 'uglify']);
 }

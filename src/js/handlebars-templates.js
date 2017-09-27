@@ -34,8 +34,6 @@ this["personaQTemplates"]["accordionPersonaList"] = Handlebars.template({"1":fun
   return buffer;
 },"usePartial":true,"useData":true});
 
-
-
 this["personaQTemplates"]["arcanaList"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
   var stack1, buffer = "";
   stack1 = this.invokePartial(partials.personaListItem, '            ', 'personaListItem', depth0, undefined, helpers, partials, data);
@@ -53,13 +51,9 @@ this["personaQTemplates"]["arcanaList"] = Handlebars.template({"1":function(dept
   return buffer;
 },"usePartial":true,"useData":true});
 
-
-
 this["personaQTemplates"]["creditsPartial"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-  return "<div class=\"credits panel-footer text-right\">\r\n    <div id=\"\" class=\"text-right\">\r\n        <span>\r\n            <small>\r\n                <ol class=\"breadcrumb\">\r\n                    <li><a href=\"https://github.com/amarriner/PersonaQFusionCalculator\">v0.7.0</a></li>\r\n                    <li>by <a href=\"https://twitter.com/amarriner\">@amarriner</a></li>\r\n                    <li>Based on \r\n                        <a href=\"http://www.gamefaqs.com/3ds/739685-persona-q-shadow-of-the-labyrinth/faqs/70843\">this FAQ</a>\r\n                    </li>\r\n                </ol>\r\n            </small>\r\n        </span>\r\n    </div>\r\n</div>";
+  return "<div class=\"credits panel-footer text-right\">\r\n    <div id=\"\" class=\"text-right\">\r\n        <span>\r\n            <small>\r\n                <ol class=\"breadcrumb\">\r\n                    <li><a href=\"https://github.com/trigork/PersonaQFusionCalculator\">v0.7.5</a></li>\r\n                    <li>by <a href=\"https://twitter.com/amarriner\">@amarriner</a> & <a href=\"https://twitter.com/trigork\">@trigork</a></li>\r\n                    <li>Based on \r\n                        <a href=\"http://www.gamefaqs.com/3ds/739685-persona-q-shadow-of-the-labyrinth/faqs/70843\">this FAQ</a>\r\n                    </li>\r\n                </ol>\r\n            </small>\r\n        </span>\r\n    </div>\r\n</div>";
   },"useData":true});
-
-
 
 this["personaQTemplates"]["ingredientsControls"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
   var stack1, buffer = "";
@@ -86,8 +80,6 @@ this["personaQTemplates"]["ingredientsControls"] = Handlebars.template({"1":func
   return buffer;
 },"usePartial":true,"useData":true});
 
-
-
 this["personaQTemplates"]["ingredientsList"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
   var stack1, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
   return "        <li class=\"row list-group-item\">\r\n            <div class=\"col-md-6\">"
@@ -103,8 +95,6 @@ this["personaQTemplates"]["ingredientsList"] = Handlebars.template({"1":function
   if (stack1 != null) { buffer += stack1; }
   return buffer + "</ul>";
 },"useData":true});
-
-
 
 this["personaQTemplates"]["personaListItemPartial"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
   return " list-group-item-info";
@@ -140,8 +130,6 @@ this["personaQTemplates"]["personaListItemPartial"] = Handlebars.template({"1":f
   return buffer + "            </ul>\r\n        </div>\r\n    </div>\r\n</li>";
 },"useData":true});
 
-
-
 this["personaQTemplates"]["personaList"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
   var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
   return "                    <span class=\"glyphicon glyphicon-eye-open\" aria-hidden=\"true\"></span> <span class=\"hidden-xs\">Arcana: </span> "
@@ -161,8 +149,6 @@ this["personaQTemplates"]["personaList"] = Handlebars.template({"1":function(dep
   if (stack1 != null) { buffer += stack1; }
   return buffer + "</ul>";
 },"usePartial":true,"useData":true});
-
-
 
 this["personaQTemplates"]["searchControls"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
   var stack1, buffer = "";
@@ -197,8 +183,6 @@ this["personaQTemplates"]["searchControls"] = Handlebars.template({"1":function(
   return buffer;
 },"usePartial":true,"useData":true});
 
-
-
 this["personaQTemplates"]["skillControls"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
   var stack1, helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, buffer = "<div class=\"panel-heading\">\r\n    <h3 class=\"panel-title\">\r\n        <span class=\"glyphicon glyphicon-search\" aria-hidden=\"true\"/> Skill Search\r\n    </h3>\r\n</div>\r\n    \r\n<div class=\"panel-body\">\r\n    <p class=\"exclaim bg-info text-info\">\r\n        <strong>\r\n            <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"/> "
     + escapeExpression(((helper = (helper = helpers.exclaim || (depth0 != null ? depth0.exclaim : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"exclaim","hash":{},"data":data}) : helper)))
@@ -207,8 +191,6 @@ this["personaQTemplates"]["skillControls"] = Handlebars.template({"compiler":[6,
   if (stack1 != null) { buffer += stack1; }
   return buffer;
 },"usePartial":true,"useData":true});
-
-
 
 this["personaQTemplates"]["skillDetails"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
   return "<div class=\"panel panel-info\">\r\n";

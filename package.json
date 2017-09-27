@@ -1,6 +1,6 @@
 {
   "name": "personaQFusionCalculator",
-  "version": "0.7.0",
+  "version": "0.7.5",
   "description": "Persona Q Fusion Calculator",
   "main": "Gruntfile.js",
   "dependencies": {
@@ -22,12 +22,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/amarriner/PersonaQFusionCalculator.git"
+    "url": "https://github.com/trigork/PersonaQFusionCalculator.git"
   },
   "author": "Aaron Marriner",
+  "contributors": ["Rodrigo Martín"],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/amarriner/PersonaQFusionCalculator/issues"
+    "url": "https://github.com/trigork/PersonaQFusionCalculator/issues"
   },
-  "homepage": "https://github.com/amarriner/PersonaQFusionCalculator"
+  "homepage": "https://github.com/trigork/PersonaQFusionCalculator"
 }
