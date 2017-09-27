@@ -351,33 +351,38 @@ function getNormalFusion(a, b) {
     var persona;
     var personas = [];
 
-    if (arcana) {
+    if (arcana >= 0) {
         activePersona = undefined;
 
         var avg = (a.level + b.level) / 2;
-        $.each(personaQ.personas.sort(personaSortLevelDesc), function(i) {
+        if (a.arcana == b.arcana){
+          $.each(personaQ.personas.sort(personaSortLevelDesc), function(i) {
             if (this.arcana === arcana) {
-                // console.log(" - Found: " + this.name);
                 personas.push(this);
-
                 if ([a, b].indexOf(this) < 0 && this.type != "special"){
-                  if (a.arcana == b.arcana){
                     if (this.level <= avg && (typeof activePersona === "undefined")) {
                         activePersona = this.name;
                         personas[personas.length - 1].active = true;
                     }
-                  } else {
-                    if (this.level > avg && (typeof activePersona === "undefined")) {
-                        activePersona = this.name;
-                        personas[personas.length - 1].active = true;
-                    }
-                  }
                 }
-            }
+                }
+          });
+          return personas.reverse();
+        }
+        $.each(personaQ.personas.sort(personaSortLevelAsc), function(i) {
+          if (this.arcana === arcana) {
+              personas.push(this);
+              if ([a, b].indexOf(this) < 0 && this.type != "special"){
+                if (this.level > avg && (typeof activePersona === "undefined")) {
+                    activePersona = this.name;
+                    personas[personas.length - 1].active = true;
+                }
+              }
+          }
         });
     }
 
-    return personas.reverse();
+    return personas;
 }
 
 function getTripleFusion(a, b, c) {
